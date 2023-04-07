@@ -1,7 +1,6 @@
 package ru.croc.java.homework4.firstTaskTests;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.croc.java.homework4.firstTask.ControllerEmployee;
 import ru.croc.java.homework4.firstTask.Employee;
@@ -12,7 +11,9 @@ import java.util.Arrays;
 
 
 public class FirstsTaskTest {
-
+    /**
+     * Тест некоректныйх значений
+     */
     @Test
     public void testIncorrectData(){
         ControllerEmployee testController = new ControllerEmployee(null);
@@ -20,6 +21,9 @@ public class FirstsTaskTest {
         Assertions.assertNull(testController.getSortedManagers());
     }
 
+    /**
+     * Текст кореектности разделения
+     */
     @Test
     public void testDivisionIntoOrganization(){
         Employee manager1 = new Employee(1, "Maxim", null);
@@ -41,6 +45,9 @@ public class FirstsTaskTest {
 
     }
 
+    /**
+     * Тест коректности сортировки
+     */
     @Test
     public void testSorting(){
         Employee manager1 = new Employee(10, "Maxim", null);

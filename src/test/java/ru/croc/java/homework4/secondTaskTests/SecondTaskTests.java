@@ -8,6 +8,9 @@ import ru.croc.java.homework4.secondTask.Pair;
 import java.util.Arrays;
 
 public class SecondTaskTests {
+    /**
+     * Тест коректных, ненулевых начальных значений
+     */
     @Test
     public void testCorrectData(){
         LiteraryAgency testAgency = new LiteraryAgency();
@@ -19,6 +22,9 @@ public class SecondTaskTests {
                 new Pair<>("Николаева Мария", 4.76)), testAgency.getRatingList());
     }
 
+    /**
+     * тест коректных начальных значений без встречающихся слов
+     */
     @Test
     public void testZeroEntry(){
         LiteraryAgency testAgency = new LiteraryAgency();
@@ -29,6 +35,10 @@ public class SecondTaskTests {
                 new Pair<>("Морозов Иван", 0.0),
                 new Pair<>("Козлова Ольга", 0.0)), testAgency.getRatingList());
     }
+
+    /**
+     * тест некоректных значений
+     */
     @Test
     public void testIncorrectData(){
         LiteraryAgency testAgency = new LiteraryAgency();
